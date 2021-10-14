@@ -1,11 +1,9 @@
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
-from django.urls import include, path
-
-from .views import (
-    CategoryViewSet, CommentViewSet, GenreViewSet,
-    ReviewViewSet, TitleViewSet, UserViewSet,
-    create_user_or_get_code, obtain_token)
+from .views import (CategoryViewSet, CommentViewSet, GenreViewSet,
+                    ReviewViewSet, TitleViewSet, UserViewSet,
+                    create_user_or_get_code, obtain_token)
 
 API_VERSION = 'v1'
 

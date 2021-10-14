@@ -1,24 +1,23 @@
+from django.conf import settings
+from django.contrib.auth.tokens import default_token_generator
+from django.core.mail import send_mail
+from django.db.models import Avg
+from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, mixins, permissions, status, viewsets
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
 
-from django.conf import settings
-from django.contrib.auth.tokens import default_token_generator
-from django.core.mail import send_mail
-from django.db.models import Avg
-from django.shortcuts import get_object_or_404
-
 from .filters import TitleFilter
-from .models import Category, Genre, Title, Review, User
-from .permissions import (IsAdmin, IsAdminOrReadOnly,
-                          IsAdminModeratorAuthorOrCanCreateOrReadOnly)
-from .serializers import (
-    CategorySerializer, CommentSerializer, GenreSerializer,
-    ReviewSerializer, TitleReadSerializer, TitleWriteSerializer,
-    UserAuthSerializer, UserObtainTokenSerializer, UserSerializer
-)
+from .models import Category, Genre, Review, Title, User
+from .permissions import (IsAdmin, IsAdminModeratorAuthorOrCanCreateOrReadOnly,
+                          IsAdminOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer,
+                          TitleReadSerializer, TitleWriteSerializer,
+                          UserAuthSerializer, UserObtainTokenSerializer,
+                          UserSerializer)
 
 
 @api_view(('POST',))
