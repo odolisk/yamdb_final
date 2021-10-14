@@ -17,7 +17,7 @@ services:
     env_file:
       - .env
   migration:
-    build: .
+    image: odolisk/yamdb_final
     command: python manage.py migrate --noinput
     restart: on-failure
     volumes:
