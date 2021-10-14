@@ -20,9 +20,8 @@ jobs:
         pip install -r requirements.txt
 
     - name: Obtain secret key and put to .env
-      with:
-        script: |
-          echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
+      run: |
+        echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
 
     - name: Test with flake8 and django tests
       run: |
