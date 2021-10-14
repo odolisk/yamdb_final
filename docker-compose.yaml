@@ -19,6 +19,7 @@ services:
   migration:
     build: .
     command: python manage.py migrate --noinput
+    restart: on-failure
     volumes:
       - .:/code
     depends_on:
