@@ -21,6 +21,7 @@ jobs:
 
     - name: Obtain secret key and put to .env
       run: |
+        touch .env
         echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
 
     - name: Test with flake8 and django tests
