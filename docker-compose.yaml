@@ -12,6 +12,7 @@ services:
     volumes:
       - static_value:/code/static/
       - media_value:/code/media/
+    command: python manage.py collectstatic --noinput
     depends_on:
       - db
     env_file:
