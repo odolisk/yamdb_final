@@ -1,6 +1,6 @@
 FROM python:3.8-slim-buster
 
-COPY ./ /code
+COPY ./ /code/yamdb_final/
 WORKDIR /code/yamdb_final/
 RUN ls /code/yamdb_final/ -la
 RUN pip install -r requirements.txt
