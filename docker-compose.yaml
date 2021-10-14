@@ -21,7 +21,7 @@ services:
     command: python manage.py migrate --noinput
     restart: on-failure
     volumes:
-      - .:/code
+      - .:/code/
     depends_on:
       - db
   nginx:
