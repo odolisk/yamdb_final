@@ -4,5 +4,5 @@ WORKDIR /code/
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
-RUN python manage.py collectstatic --noinput
+RUN SECRET_KEY=temp_value python manage.py collectstatic -v 0 --clear --noinput
 CMD gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
