@@ -52,7 +52,9 @@ python manage.py loaddata fixtures.json
 
 ### Инфо
 
-Документация доступна по адресу <http://localhost:8000/redoc/>
+- Документация доступна по адресу **/redoc/**
+- Админка **/admin/**
+- API **/api/v1/**
 
 ### Автор проекта
 
