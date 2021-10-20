@@ -23,7 +23,7 @@ class User(AbstractUser):
         })
 
     bio = models.TextField(
-        'О сЯбе',
+        'О себе',
         blank=True,
         help_text='О себе')
 
