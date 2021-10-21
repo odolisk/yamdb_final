@@ -8,9 +8,9 @@ load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'temp_value')
+SECRET_KEY = os.getenv('SECRET_KEY', 'temp_value')
 
-DEBUG = False  # os.environ.get('DEBUG', False)
+DEBUG = (os.getenv('DEBUG', 'False') == 'True')
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', ['*'])
 
