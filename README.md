@@ -65,7 +65,7 @@ python manage.py loaddata fixtures.json
 
 ### Страница проекта
 
-<http://odolisk.ru/api/v1/>
+Готовый деплой можно увидеть по ссылке <http://odolisk.ru/api/v1/>
 
 ### Автор проекта
 
