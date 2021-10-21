@@ -6,13 +6,13 @@
 
 ### Описание
 
-Проект YamDB собирает пользовательские отзывы на кино, музыкльные произведения,
-книги
+Проект YamDB собирает пользовательские отзывы на кино, музыкальные произведения, книги.
+Публикуйте отзывы, комментируйте чужие. Выставляйте оценки произведениям.
 
 ### Требования
 
-- docker
-- docker-compose
+- docker (_установка_ <https://docs.docker.com/engine/install/#server> )
+- docker-compose (_установка_ <https://docs.docker.com/compose/install/> )
 
 ### Переменные
 
@@ -26,6 +26,8 @@
 - DB_HOST (db)
 - DB_PORT (5432)
 - SECRET_KEY
+- DEBUG (False)
+- ALLOWED_HOST (['*'])
 
 ### Запуск проекта*
 
@@ -55,6 +57,15 @@ python manage.py loaddata fixtures.json
 - Документация доступна по адресу **/redoc/**
 - Админка **/admin/**
 - API **/api/v1/**
+  - Произведения **titles/**
+  - Жанры **genre/**
+  - Категории **category/**
+  - Комментарии **titles/{title_id}/reviews/{review_id}/comments/**
+  - Отзывы **titles/{title_id}/reviews/**
+
+### Страница проекта
+
+<http://odolisk.ru/api/v1/>
 
 ### Автор проекта
 

@@ -151,3 +151,5 @@ media/
 
 postgres_data/
 
+*.http
+
